@@ -1,0 +1,108 @@
+/* pagination.less
+ *
+ * Pagination styles
+ */
+
+
+.pagination {
+	position: absolute;
+	top: 5px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: auto;
+	height: auto;
+	margin: 0;
+}
+.pagination ul {
+	display: inline-block;
+	.ie7-inline-block();
+	margin-left: 0;
+	margin-bottom: 0;
+	.border-radius(0);
+	.box-shadow(0 0 0 rgba(0,0,0,0));
+}
+.pagination li {
+	display: inline;
+	&:last-child {
+		a {
+			margin-right: 0 !important; // Overriding some specificity
+			&:after {
+				content: "";
+			}
+		}
+	}
+}
+.pagination a {
+	position: relative;
+	float: left;
+	padding: 0;
+	margin-right: 30px !important; // Overriding some specificity
+	//line-height: (@baseLineHeight * 2) - 2;
+	line-height: @baseLineHeight;
+	text-decoration: underline;
+	color: @buddGrey;
+	border: none;
+	border-left-width: 0;
+	&:after {
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: -14px;
+		width: 5px;
+		height: auto;
+		content: "•";
+		color: @buddGreyLighter;
+	}
+}
+.pagination a:hover,
+.pagination .active a {
+	background-color: transparent;
+	text-decoration: none;
+}
+.pagination a:hover {
+	color: @buddGreyLight;
+}
+.pagination .active a {
+	.garamond-bold;
+	color: @buddGrey;
+	cursor: default;
+}
+.pagination .disabled span,
+.pagination .disabled a,
+.pagination .disabled a:hover {
+	color: @buddGreyLighter;
+	background-color: transparent;
+	cursor: default;
+	text-decoration: none;
+}
+.pagination li:first-child a {
+	border-left-width: 0;
+	.border-radius(0);
+}
+.pagination li:last-child a {
+.border-radius(0);
+}
+.pagination .prev,
+.pagination .next {
+	a {
+		text-decoration: none;
+	}
+}
+
+// Centered
+.pagination-centered {
+	text-align: center;
+}
+.pagination-right {
+	text-align: right;
+}
+
+// Media queries
+@media (max-width: 767px) {
+	.pagination {
+		position: relative;
+		margin: 0 0 5px;
+	}
+}

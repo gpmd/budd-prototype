@@ -1,0 +1,152 @@
+/* carousel.less
+*
+* Carousel styles
+*/
+
+
+.carousel {
+	position: relative;
+	max-width: 940px;
+	margin-bottom: @baseLineHeight;
+	line-height: 1;
+}
+
+.carousel-inner {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}
+
+.carousel {
+
+	.item {
+		display: none;
+		position: relative;
+		.transition(.6s ease-in-out left);
+	}
+
+	// Account for jankitude on images
+	.item > img {
+		display: block;
+		line-height: 1;
+	}
+
+	.active,
+	.next,
+	.prev { display: block; }
+
+	.active { left: 0; }
+
+	.next,
+	.prev {
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	.next { left: 100%; }
+	.prev { left: -100%; }
+	.next.left,
+	.prev.right { left: 0; }
+
+	.active.left { left: -100%; }
+	.active.right { left: 100%; }
+
+}
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 10px;
+	width: 40px;
+	height: auto;
+	margin-top: 0;
+	//background: @grayDarker;
+	background: transparent url("/img/carousel-nav-left.png") no-repeat center left;
+	border: none;
+	.border-radius(0);
+	.opacity(0);
+
+	// we can't have this transition here
+	// because webkit cancels the carousel
+	// animation if you trip this while
+	// in the middle of another animation
+	// ;_;
+	// .transition(opacity .2s linear);
+
+	// Reposition the right one
+	&.right {
+		left: auto;
+		right: 10px;
+		background: transparent url("/img/carousel-nav-right.png") no-repeat center right;
+	}
+
+	// Hover state
+	&:hover {
+		.opacity(25);
+	}
+}
+
+// Caption for text below images
+// -----------------------------
+
+// Not used at the moment
+.carousel-caption {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 31.914893617021278%; // 4 columns
+	//width: 48.93617021276596%; // 6 columns
+	height: 100%;
+	padding: @baseLineHeight * 2;
+	background-color: #fff;
+	background-color: rgba(255,255,255,0.8);
+	.carousel-caption-inner {
+		position: relative;
+		height: auto;
+		border-top: 1px solid @buddGrey;
+		border-bottom: 1px solid @buddGrey;
+		h2 {
+			margin-bottom: @baseLineHeight;
+			color: @black;
+			line-height: @baseLineHeight;
+			a {
+				text-decoration: none;
+			}
+		}
+		h3 {
+			margin-bottom: @baseLineHeight / 1.5;
+			color: @black;
+			line-height: @baseLineHeight;
+			a {
+				text-decoration: none;
+			}
+		}
+		h4 {
+			margin-bottom: @baseLineHeight / 2;
+			color: @black;
+			line-height: @baseLineHeight / 1.25;
+			a {
+				text-decoration: none;
+			}
+		}
+		p {
+			margin-bottom: @baseLineHeight / 2;
+			color: @black;
+			line-height: @baseLineHeight;
+			a {}
+		}
+		& > :first-child {
+			padding-top: @baseLineHeight / 1.5;
+		}
+		& > :last-child {
+			padding-bottom: 0;
+			margin-bottom: @baseLineHeight / 1.5;
+		}
+	}
+}

@@ -1,0 +1,316 @@
+/* budd-components.less
+ *
+ * Styling for Budd specific components
+ */
+
+
+// ==========================================================================
+// Type
+// ==========================================================================
+
+// Link lists
+// ==========================================================================
+
+.link-list {
+	list-style-type: none;
+	margin-left: 0;
+	&.horizontal,
+	&.stacked {
+		li {
+			position: relative;
+			&.active {
+				.garamond-bold;
+			}
+		}
+	}
+	/* Horizontal lists */
+	&.horizontal {
+		li {
+			display: inline-block;
+			.ie7-inline-block();
+			padding-left: 20px;
+			margin-left: 5px;
+			&:before {
+				position: absolute;
+				display: block;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				width: auto;
+				height: auto;
+				content: "•";
+				.garamond-regular;
+				.font-size(16);
+				color: @buddGreyLighter;
+			}
+			&:first-child {
+				padding-left: 0;
+				margin-left: 0;
+				&:before {
+					content: "";
+				}
+			}
+		}
+	}
+	/* Stacked lists */
+	&.stacked {
+		li {}
+	}
+}
+
+
+// ==========================================================================
+// Images
+// ==========================================================================
+
+// Featured images
+// ==========================================================================
+
+.feature-pullout {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin-bottom: @baseLineHeight;
+	.feature-text {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 50%;
+		height: 100%;
+		padding: @baseLineHeight;
+		background-color: #fff;
+		background-color: rgba(255,255,255,0.75);
+		.feature-text-inner {
+			position: relative;
+			height: 100%;
+			border-top: 1px solid @buddGrey;
+			border-bottom: 1px solid @buddGrey;
+			h2 {
+				margin-bottom: @baseLineHeight;
+				line-height: @baseLineHeight;
+				a {
+					text-decoration: none;
+				}
+			}
+			h3 {
+				margin-bottom: @baseLineHeight / 1.5;
+				line-height: @baseLineHeight;
+				a {
+					text-decoration: none;
+				}
+			}
+			h4 {
+				margin-bottom: @baseLineHeight / 2;
+				line-height: @baseLineHeight / 1.25;
+				a {
+					text-decoration: none;
+				}
+			}
+			p {
+				margin-bottom: @baseLineHeight / 2;
+				line-height: @baseLineHeight;
+				a {}
+			}
+			& > :first-child {
+				padding-top: @baseLineHeight / 1.5;
+			}
+			& > :last-child {
+				padding-bottom: 0;
+				margin-bottom: @baseLineHeight / 1.5;
+			}
+		}
+	}
+	img {}
+}
+
+// Media queries
+// =============
+
+// Up to landscape phone
+@media (max-width: 480px) {}
+
+// Landscape phone to small desktop & portrait tablet
+@media (max-width: 767px) {}
+
+// Portrait tablet to default desktop
+@media (min-width: 768px) and (max-width: 979px) {}
+
+// Up to default desktop
+@media (max-width: 979px) {
+	.feature-pullout {
+		position: relative;
+		display: block;
+		text-align: center;
+		.feature-text {
+			position: relative;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			margin: 0 auto;
+		}
+	}
+}
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+
+// ==========================================================================
+// Toolbar
+// ==========================================================================
+
+// Toolbar
+// ==========================================================================
+
+.toolbar {
+	position: relative;
+	.clearfix;
+	padding: 5px 0;
+	border-top: 1px solid @buddGrey;
+	border-bottom: 1px solid @buddGrey;
+}
+
+// Info
+// ==========================================================================
+
+.info {
+	.pull-left;
+}
+
+// Media queries
+@media (max-width: 767px) {
+	.info {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+// Pagination
+// ==========================================================================
+
+// See pagination.less
+
+// Page count
+// ==========================================================================
+
+.page-count {
+	.pull-right;
+	ul {
+		list-style-type: none;
+		margin-left: 0;
+		margin-bottom: 0;
+		li {
+			display: inline-block;
+			.ie7-inline-block();
+			a {
+				position: relative;
+				margin-right: 25px;
+				color: @buddGrey;
+				&:after {
+					display: block;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: -15px;
+					width: 5px;
+					height: auto;
+					content: "•";
+					color: @buddGreyLighter;
+				}
+			}
+			&.active {
+				a {
+					.garamond-bold;
+					text-decoration: none;
+				}
+			}
+			&:first-child {
+				margin-right: 10px;
+			}
+			&:last-child {
+				a {
+					margin-right: 0;
+					&:after {
+						content: "";
+					}
+				}
+			}
+		}
+	}
+}
+
+// Media queries
+@media (max-width: 767px) {
+	.page-count {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+
+// ==========================================================================
+// Forms
+// ==========================================================================
+
+// Uniform
+// ==========================================================================
+
+// For main Uniform styles see budd-uniform.less
+
+.reset {
+	text-decoration: none;
+	i {
+		padding: 1px 3px;
+		margin-right: 5px;
+		.font-size(10);
+		line-height: 1;
+		color: @buddGrey;
+		background-color: @buddGreyLighter;
+	}
+	&:hover {
+		i {
+			color: @white;
+			background-color: @buddGreyLight;
+		}
+	}
+}
+
+
+// ==========================================================================
+// Custom buttons
+// ==========================================================================
+
+// Jump to search
+.jump-to-search {
+	position: absolute;
+	z-index: 2;
+	top: -3px;
+	right: 0;
+	text-decoration: none;
+}
+
+// Jump to top
+.jump-to-top {
+	position: relative;
+	.center-block;
+	line-height: @baseLineHeight / 1.5;
+	text-align: center;
+	text-decoration: none;
+	i {
+		text-decoration: none;
+	}
+	span {
+		padding-left: 4px;
+		.copperplate-medium;
+		.font-size(12);
+		&:hover {
+			color: @linkColorHover;
+		}
+	}
+}

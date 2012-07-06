@@ -1,0 +1,195 @@
+/* forms.less
+ *
+ * Base styles for various input types, form layouts, and states
+ */
+
+
+// Form controls
+// -------------------------
+
+// Shared size and type resets
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+	display: inline-block;
+	height: auto;
+	padding: 4px 8px;
+	margin-bottom: 9px;
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	color: @gray;
+}
+
+// Everything else
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+	background-color: @inputBackground;
+	border: 1px solid @inputBorder;
+	.border-radius(@inputBorderRadius);
+	.box-shadow(inset 0 0 0 rgba(0,0,0,0));
+	@transition: border linear .2s, box-shadow linear .2s;
+	.transition(@transition);
+
+	// Focus state
+	&:focus {
+		border-color: @buddGrey;
+		outline: 0;
+		outline: thin dotted \9; /* IE6-9 */
+		.box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(39,40,42,.25)");
+	}
+}
+
+// select tag overrides
+select {
+	padding: 4px;
+}
+
+// Set the height of select and file controls to match text inputs
+select,
+input[type="file"] {
+	height: 36px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
+	*margin-top: 4px; /* For IE7, add top margin to align select with labels */
+	line-height: 36px;
+}
+
+// Make select elements obey height by applying a border
+select {
+	width: 220px; // default input width + 10px of padding that doesn't get applied
+	border: 1px solid #bbb;
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+	margin: 0;
+	*margin-top: 0; /* IE7 */
+	line-height: normal;
+	cursor: pointer;
+}
+
+// CHECKBOXES & RADIOS
+// -------------------
+
+// Indent the labels to position radios/checkboxes as hanging
+.radio,
+.checkbox {
+	min-height: 18px; // clear the floating input if there is no label text
+	padding-left: 0;
+}
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+	float: left;
+	margin-left: 0;
+}
+
+// Move the options list down to align with labels
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+	padding-top: 0; // has to be padding because margin collaspes
+}
+
+// Radios and checkboxes on same line
+// TODO v3: Convert .inline to .control-inline
+.radio.inline,
+.checkbox.inline {
+	display: inline-block;
+	width: ((@fluidGridColumnWidth * 3) + (@fluidGridGutterWidth * 2)); // columns + gutters
+	margin-right: @fluidGridGutterWidth;
+	padding-top: 0;
+	margin-bottom: 0;
+	vertical-align: middle;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+	margin-left: 0; // space out consecutive inline controls
+}
+
+// SEARCH FORM
+// -----------
+
+.search-query {
+	padding-right: 14px;
+	padding-right: 4px \9;
+	padding-left: 14px;
+	padding-left: 4px \9; /* IE7-8 doesn't have border-radius, so don't indent the padding */
+	margin-bottom: 0 !important; // remove the default margin on all inputs
+	.border-radius(0);
+}
+
+// Search button
+.search-btn {
+	position: relative;
+	//padding: 0;
+	margin-left: 10px;
+	text-indent: -9999px;
+	background-color: transparent !important;
+	border: none;
+	.icon-search {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 20px;
+		height: auto;
+		text-indent: 0;
+	}
+	&:hover {
+		.icon-search {
+			color: @buddGreyMid;
+		}
+	}
+}
+
+// FORM ACTIONS
+// ------------
+
+.form-actions {
+	padding: 20px 0 0;
+	margin-top: @baseLineHeight;
+	margin-bottom: 0;
+	background-color: @formActionsBackground;
+	border-top: 1px solid @buddGrey;
+	.clearfix(); // Adding clearfix to allow for .pull-right button containers
+}
+
+// For text that needs to appear as an input but should not be an input
+.uneditable-input {
+	overflow: hidden; // prevent text from wrapping, but still cut it off like an input does
+	white-space: nowrap;
+	cursor: not-allowed;
+	background-color: @inputBackground;
+	border-color: #eee;
+	.box-shadow(inset 0 0 0 rgba(0,0,0,0));
+}

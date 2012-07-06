@@ -1,0 +1,115 @@
+/*
+ * Style guide for Budd Shirtmakers v1.0
+ *
+ * Copyright 2012 Budd Shirtmakers
+ * Built by GPMD: http://www.gpmd.co.uk
+ *
+ * Use the imported files below to override the default Bootstrap styles.
+ * 
+ * NOTE - Do not edit the Bootstrap files directly!
+ * The only file you should edit in Bootstrap is bootstrap.less,
+ * in which you should point variables.less to your own version.
+ */
+
+
+// ==========================================================================
+// Core variables and mixins
+// ==========================================================================
+
+// I'm using my own edited version of the Bootstrap variables
+@import "budd-variables.less";
+// I'm loading both the Bootstrap, and my own mixins
+@import "../bootstrap/less/mixins.less";
+@import "budd-mixins.less";
+
+
+// ==========================================================================
+// Grid system and page structure
+// ==========================================================================
+
+@import "scaffolding.less";
+@import "grid.less";
+@import "layouts.less";
+
+
+// ==========================================================================
+// Base CSS
+// ==========================================================================
+
+@import "type.less";
+@import "code.less";
+@import "forms.less";
+// jQuery plugin used for styling form elements
+@import "budd-uniform.less";
+@import "tables.less";
+
+
+// ==========================================================================
+// Components: common
+// ==========================================================================
+
+// Bootstrap sprites disabled due to clash with Fontawesome
+//@import "sprites.less";
+@import "dropdowns.less";
+@import "wells.less";
+@import "component-animations.less";
+@import "close.less";
+
+
+// ==========================================================================
+// Components: Buttons & Alerts
+// ==========================================================================
+
+@import "buttons.less";
+@import "button-groups.less";
+@import "alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+
+// ==========================================================================
+// Components: Nav
+// ==========================================================================
+
+@import "navs.less";
+@import "navbar.less";
+@import "budd-toolbar.less";
+@import "breadcrumbs.less";
+@import "pagination.less";
+@import "pager.less";
+
+
+// ==========================================================================
+// Components: Popovers
+// ==========================================================================
+
+@import "modals.less";
+@import "tooltip.less";
+@import "popovers.less";
+
+
+// ==========================================================================
+// Components: Misc
+// ==========================================================================
+
+@import "thumbnails.less";
+@import "labels-badges.less";
+@import "progress-bars.less";
+@import "accordion.less";
+@import "carousel.less";
+@import "hero-unit.less";
+
+
+// ==========================================================================
+// Utility classes
+// ==========================================================================
+
+// I'm loading both the Bootstrap, and my own utilities
+@import "../bootstrap/less/utilities.less";
+@import "../bootstrap/less/responsive-utilities.less";
+@import "utilities.less"; // Has to be last to override when necessary
+
+
+// ==========================================================================
+// Budd specific
+// ==========================================================================
+
+@import "budd-components.less";

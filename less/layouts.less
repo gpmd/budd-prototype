@@ -1,0 +1,65 @@
+/* layouts.less
+ *
+ * Layout styles
+ */
+
+
+// ==========================================================================
+// Global block styles
+// ==========================================================================
+
+// Header
+// ==========================================================================
+
+// Main
+// ==========================================================================
+
+.main-container {
+	padding-top: @baseLineHeight;
+	border-top: 1px solid @buddGrey;
+	margin-top: @baseLineHeight;
+}
+
+
+// Footer
+// ==========================================================================
+
+.footer-container,
+.footer-bottom-inner {
+	padding-top: @baseLineHeight;
+	border-top: 1px solid @buddGrey;
+	margin-top: @baseLineHeight;
+}
+
+.footer-top {
+	.quick-access {
+		margin-top: @baseLineHeight;
+		.form-search {
+			margin-bottom: @baseLineHeight;
+		}
+	}
+}
+
+// Landscape phone to small desktop & portrait tablet
+@media (max-width: 767px) {
+	.footer {
+		.quick-access {
+			// switch link list to horizontal
+			.link-list > .horizontal;
+			padding-bottom: @baseLineHeight;
+			border-bottom: 1px solid @buddGrey;
+			margin-bottom: @baseLineHeight;
+			text-align: center;
+		}
+		// Override the default responsive layout styles - switch to a 2 column layout
+		.span3 {
+			float: left;
+			display: block;
+			width: 50%;
+		}
+		// Add a bottom margin to the first two spans (not sure why (-n+3) is needed rather than (-n+2)?)
+		.span3:nth-child(-n+3) {
+			margin-bottom: @baseLineHeight;
+		}
+	}
+}

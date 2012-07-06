@@ -1,0 +1,116 @@
+/* scaffolding.less
+ *
+ * Basic and global styles for generating a grid system, structural layout, and page templates
+ */
+
+
+// ==========================================================================
+// Body reset & global styles
+// ==========================================================================
+
+// Body defaults
+ body {
+ 	padding: @baseLineHeight * 3.5 @baseLineHeight;
+	font-family: @baseFontFamily;
+	font-size: 16px; // Fallback for browsers that don't understand 'rem's
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	color: @textColor;
+	background-color: @bodyBackground;
+ }
+
+// Box model
+ * {
+ 	.box-sizing(border-box);
+ }
+
+
+// Landscape phone to small desktop & portrait tablet
+@media (max-width: 767px) {
+	 body {
+ 		padding: @baseLineHeight * 2 @baseLineHeight;
+ 	}
+}
+
+
+// ==========================================================================
+// Structural layout main block defaults
+// ==========================================================================
+
+.header-container,
+.header {
+	position: relative;
+}
+
+
+// ==========================================================================
+// Global links
+// ==========================================================================
+
+a {
+	color: @linkColor;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: @linkColorHover;
+	text-decoration: none;
+}
+
+a:active,
+a:visited {
+	color: @linkColorHover;
+}
+
+
+// ==========================================================================
+// Site logo
+// ==========================================================================
+
+#logo {
+	position: relative;
+	z-index: 2;
+	display: block;
+	width: 125px;
+	margin-right: auto;
+	margin-bottom: @baseLineHeight / 1.5;
+	margin-left: auto;
+	text-align: center;
+}
+/*#logo {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 60px;
+	a {
+		position: relative;
+		z-index: 15;
+		width: 100%;
+		text-align: center;
+		img {
+			display: block;
+			width: 125px;
+			height: 60px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+}*/
+
+// Landscape phone to small desktop & portrait tablet
+@media (max-width: 767px) {
+	#logo {
+		//position: relative;
+		//z-index: 2;
+		//display: block;
+		//width: 125px;
+		//margin-right: auto;
+		margin-bottom: @baseLineHeight * 1.5;
+		//margin-left: auto;
+		//text-align: center;
+	}
+}

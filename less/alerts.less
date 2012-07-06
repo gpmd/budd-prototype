@@ -1,0 +1,50 @@
+/* alerts.less
+ *
+ * Alert styles
+ */
+
+
+// Base alert styles
+.alert {
+	padding: 10px 35px 10px 15px;
+	margin-bottom: @baseLineHeight;
+	text-shadow: 0 0 0 rgba(0,0,0,0);
+	background-color: @warningBackground;
+	border: 1px solid @warningBorder;
+	.border-radius(0);
+	color: @warningText;
+}
+
+// Alternate styles
+// ----------------
+
+.alert-success {
+	background-color: @successBackground;
+	border-color: @successBorder;  
+	color: @successText;
+}
+.alert-danger,
+.alert-error {
+	background-color: @errorBackground;
+	border-color: @errorBorder;
+	color: @errorText;
+}
+.alert-info {
+	background-color: @infoBackground;
+	border-color: @infoBorder;
+	color: @infoText;
+}
+
+// Block alerts
+// ------------------------
+.alert-block {
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+.alert-block > p,
+.alert-block > ul {
+	margin-bottom: @baseLineHeight;
+}
+.alert-block p + p {
+	margin-top: 5px;
+}

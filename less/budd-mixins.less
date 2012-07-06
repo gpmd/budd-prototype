@@ -1,0 +1,22 @@
+/* mixins.less
+ *
+ * Snippets of reusable CSS to develop faster and keep code readable
+ */
+
+
+// ==========================================================================
+// Fonts
+// ==========================================================================
+
+// font-size and line-height helpers - outputs 'rem's (relative em units) with a pixel fallback
+ .font-size(@font-size: 16) {
+	@rem: (@font-size / 16);
+	font-size: @font-size * 1px; // Pixel fallback
+	font-size: ~"@{rem}rem";
+}
+
+.line-height(@line-height: 24) {
+	@rem: (@line-height / 16);
+	line-height: @line-height * 1px; // Pixel fallback
+	line-height: ~"@{rem}rem";
+}
