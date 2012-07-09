@@ -13,7 +13,12 @@ jQuery(document).ready(function($){
 			if (resizeTimeout) clearTimeout(resizeTimeout);
 			resizeTimeout = setTimeout(function() {
 				// Do the sticky navbar
-				stickyNavbar();
+				// ... but not if we're on the style guide
+				if (url.indexOf("budd-style-guide") !== -1) {
+					// Do nothing
+				} else {
+					stickyNavbar();
+				}
 			}, 100); // Resize with 100ms timeout
 		});
 	}
@@ -56,38 +61,45 @@ jQuery(document).ready(function($){
 	// Better sticky navbar (with added bounce!)
 	// =========================================
 
-	function stickyNavbar() {
-		// Do our DOM lookups beforehand
-		var nav_container = $(".navbar");
-		var nav = $(".navbar-inner");
-		var browserwidth = $(window).width();
-		// Set some defaults
-		var top_spacing = 22;
-		var waypoint_offset = 22;
-		// Do stuff if browser width is < less than 768
-		if (browserwidth < 767) {
-			nav_container.waypoint({
-				handler: function(event, direction) {
-					if (direction == 'down') {		
-						nav_container.stop().addClass("sticky").css("top",-nav.outerHeight()).animate({"top":top_spacing});
-						
-					} else {
-						nav_container.stop().removeClass("sticky").css("top",nav.outerHeight()+waypoint_offset).animate({"top":""});
+	// The initial condition is to stop the sticky nar bar running on
+	// the style guide and can be removed on the staging or live sites
+	var url = window.location.href;
+	if (url.indexOf("budd-style-guide") !== -1) {
+		// Do nothing
+	} else {
+		function stickyNavbar() {
+			// Do our DOM lookups beforehand
+			var nav_container = $(".navbar");
+			var nav = $(".navbar-inner");
+			var browserwidth = $(window).width();
+			// Set some defaults
+			var top_spacing = 22;
+			var waypoint_offset = 22;
+			// Do stuff if browser width is < less than 768
+			if (browserwidth < 767) {
+				nav_container.waypoint({
+					handler: function(event, direction) {
+						if (direction == 'down') {		
+							nav_container.stop().addClass("sticky").css("top",-nav.outerHeight()).animate({"top":top_spacing});
+							
+						} else {
+							nav_container.stop().removeClass("sticky").css("top",nav.outerHeight()+waypoint_offset).animate({"top":""});
+						}
+					},
+					offset: function() {
+						return -nav_container.outerHeight()-waypoint_offset;
 					}
-				},
-				offset: function() {
-					return -nav_container.outerHeight()-waypoint_offset;
-				}
-			});
-		// Do stuff if browser width is > greater than 768 but less than 977
-		} else if (browserwidth > 768 && browserwidth < 977) {
-			nav_container.stop().waypoint('destroy').css("top", "auto");
-		// Do stuff if browser width is > greater than 978
-		} else if (browserwidth > 978) {
-			nav_container.stop().waypoint('destroy').css("top", "40px"); // 40px equal to @baseLineHeight * 1.8
+				});
+			// Do stuff if browser width is > greater than 768 but less than 977
+			} else if (browserwidth > 768 && browserwidth < 977) {
+				nav_container.stop().waypoint('destroy').css("top", "auto");
+			// Do stuff if browser width is > greater than 978
+			} else if (browserwidth > 978) {
+				nav_container.stop().waypoint('destroy').css("top", "40px"); // 40px equal to @baseLineHeight * 1.8
+			}
 		}
+		stickyNavbar();
 	}
-	stickyNavbar();
 
 	// POW! Smooth scrolling on-page links
 	// ===================================
