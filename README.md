@@ -10,3 +10,5 @@ For any enquries regarding these design elements please contact [GPMD](http://ww
 * * *
 
 **View prototype**: [http://budd-prototype.stage.gpmd.net/](http://budd-prototype.stage.gpmd.net/)
+
+**View style guide**: [http://budd-prototype.stage.gpmd.net/budd-style-guide-1.0.html](http://budd-prototype.stage.gpmd.net/budd-style-guide-1.0.html)
