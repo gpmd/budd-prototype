@@ -294,7 +294,7 @@ div.uploader input{opacity:0;filter:alpha(opacity:0);position:absolute;top:0;rig
 #main-navigation{position:relative;*zoom:1;}#main-navigation:before,#main-navigation:after{display:table;content:"";}
 #main-navigation:after{clear:both;}
 .navbar.style-guide-navbar{position:relative !important;display:block !important	top: auto !important;right:auto !important;bottom:auto !important;left:auto !important;border-bottom:1px solid #27282a;padding-bottom:11px;}
-@media (min-width:979px){.navbar{position:relative !important;top:0 !important;}}section{margin-bottom:44px;}section >:last-child{margin-bottom:0 !important;}
+@media (min-width:979px){.navbar.style-guide-navbar{position:relative !important;top:0 !important;}}section{margin-bottom:44px;}section >:last-child{margin-bottom:0 !important;}
 .swatch{display:inline-block;position:relative;width:100%;margin-bottom:11px;}.swatch .swatch-inner{margin-top:100%;}
 .swatch-1{background-color:#27282a;}
 .swatch-2{background-color:#5d5e5f;}

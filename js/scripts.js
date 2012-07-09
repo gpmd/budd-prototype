@@ -92,10 +92,12 @@ jQuery(document).ready(function($){
 				});
 			// Do stuff if browser width is > greater than 768 but less than 977
 			} else if (browserwidth > 768 && browserwidth < 977) {
-				nav_container.stop().waypoint('destroy').css("top", "auto");
+				// Kill waypoints and remove inline styles!
+				nav_container.stop().waypoint('destroy').removeAttr('style');
 			// Do stuff if browser width is > greater than 978
 			} else if (browserwidth > 978) {
-				nav_container.stop().waypoint('destroy').css("top", "40px"); // 40px equal to @baseLineHeight * 1.8
+				// Kill waypoints and remove inline styles!
+				nav_container.stop().waypoint('destroy').removeAttr('style');
 			}
 		}
 		stickyNavbar();
