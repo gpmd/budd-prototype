@@ -1,0 +1,96 @@
+/* atyle-guide.less
+ *
+ * Style guide specifc styles
+ */
+
+
+// ==========================================================================
+// Content blocks
+// ==========================================================================
+
+// Header
+// ==========================================================================
+
+header {
+	margin-bottom: @baseLineHeight * 2;
+}
+
+#overview {
+	position: relative;
+	#logo {
+		margin-bottom: @baseLineHeight * 2;
+		img {}
+	}
+	.note {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+// Sections
+// ==========================================================================
+
+section {
+	margin-bottom: @baseLineHeight * 2;
+	// Remove bottom margins from last children
+	& > :last-child {
+		margin-bottom: 0 !important;
+	}
+}
+
+
+// ==========================================================================
+// Colour palette
+// ==========================================================================
+
+// Swatches
+// ==========================================================================
+.swatch {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	margin-bottom: @baseLineHeight / 2;
+	.swatch-inner {
+		// This gives us a height with the same aspect ratio as the width of the parent object
+		margin-top: 100%;
+	}
+}
+
+.swatch-1 {
+	background-color: rgb(39, 40, 42);
+}
+
+.swatch-2 {
+	background-color: rgb(93, 94, 95);
+}
+
+.swatch-3 {
+	background-color: rgb(147, 147, 148);
+}
+
+.swatch-4 {
+	background-color: rgb(201, 201, 202);
+}
+
+// Media queries
+@media (max-width: 767px) {
+
+	.swatch {
+		.swatch-inner {
+			margin-top: 15%;
+		}
+	}
+
+}
+
+
+// ==========================================================================
+// Icons
+// ==========================================================================
+
+#icons {
+	i {
+		margin-right: 20px;
+	}
+}
