@@ -17,7 +17,7 @@ header {
 
 #overview {
 	position: relative;
-	#logo {
+	#style-guide-logo {
 		margin-bottom: @baseLineHeight * 2;
 		img {}
 	}
@@ -27,6 +27,35 @@ header {
 		right: 0;
 	}
 }
+
+
+// Navbar
+// ==========================================================================
+
+#main-navigation {
+	position: relative;
+	.clearfix;
+}
+
+.navbar.style-guide-navbar {
+	position: relative !important;
+	display: block !important
+	top: auto !important;
+	right: auto !important;
+	bottom: auto !important;
+	left: auto !important;
+	border-bottom: 1px solid @buddGrey;
+	padding-bottom: @baseLineHeight / 2;
+}
+
+// Default desktop and up
+@media (min-width: 979px) {
+	.navbar {
+		position: relative !important;
+		top: 0 !important; // This is actually overridden in scripts.js
+	}
+}
+
 
 // Sections
 // ==========================================================================
@@ -60,17 +89,17 @@ section {
 .swatch-1 {
 	background-color: rgb(39, 40, 42);
 }
-
 .swatch-2 {
 	background-color: rgb(93, 94, 95);
 }
-
 .swatch-3 {
 	background-color: rgb(147, 147, 148);
 }
-
 .swatch-4 {
 	background-color: rgb(201, 201, 202);
+}
+.swatch-5 {
+	background-color: rgb(128, 128, 132);
 }
 
 // Media queries
@@ -82,6 +111,44 @@ section {
 		}
 	}
 
+}
+
+// ==========================================================================
+// Featured Images
+// ==========================================================================
+
+.style-guide-featured-image {
+	position: relative;
+	display: block;
+	max-width: 700px;
+	.style-guide-featured-text {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0px;
+		width: 40%;
+		height: auto;
+	}
+}
+
+// Media queries
+@media (max-width: 767px) {
+	.style-guide-featured-image {
+		position: relative;
+		display: block;
+		max-width: 700px;
+		text-align: center;
+		.style-guide-featured-text {
+			position: relative;
+			top: 0;
+			bottom: 0;
+			left: 0px;
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			margin: 0 auto;
+		}
+	}
 }
 
 
