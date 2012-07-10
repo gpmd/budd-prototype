@@ -10,23 +10,30 @@
                         <div class="container">
                             <div class="row">
                                 <div class="quick-access span12">
-                                    <form class="form-search form-inline pull-left" id="search_mini_form" action="" method="get" name="search_mini_form">
-                                        <div class="form-search">
+                                    <form class="form-search form-inline pull-left row" id="search_mini_form" action="" method="get" name="search_mini_form">
+                                        <div class="form-search span4">
                                             <label class="hide-text" for="search">Search:</label><input id="search" type="text" name="q" value="" class="input-text input-xlarge search-query" maxlength="128" placeholder="Search"><!-- <button type="submit" title="Search" class="search-btn"><i class="icon-large icon-search"></i> Search</button>-->
                                         </div>
                                     </form><!-- .form-search -->
                                     <ul class="links link-list horizontal pull-right">
                                         <li class="first">
-                                            <a href="http://demo.magentocommerce.com/customer/account/" title="My Account">My Account</a>
+                                            <a href="#" title="Contact Us">Contact Us</a>
                                         </li>
                                         <li>
-                                            <a href="http://demo.magentocommerce.com/checkout/cart/" title="My Cart" class="top-link-cart">My Cart</a>
+                                            <a href="#" title="About Budd">About Budd</a>
                                         </li>
                                         <li>
-                                            <a href="http://demo.magentocommerce.com/checkout/" title="Checkout" class="top-link-checkout">Checkout</a>
+                                            <a href="#" title="Visits">Visits</a>
                                         </li>
-                                        <li class=" last">
-                                            <a href="http://demo.magentocommerce.com/customer/account/login/" title="Log In">Log In</a>
+                                        <li>
+                                            <a href="#" title="News">News</a>
+                                        </li>
+                                        <li class="divider-vertical"></li>
+                                        <li class="first">
+                                            <a href="#" title="My Basket" class="top-link-cart">My Basket (0)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Checkout" class="top-link-checkout">Checkout</a>
                                         </li>
                                     </ul><!-- .links -->
                                 </div><!-- .quick-access -->
