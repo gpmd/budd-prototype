@@ -8,23 +8,13 @@
                                     <div id="main-carousel" class="carousel slide">
                                         <!-- Carousel items -->
                                         <div class="carousel-inner">
-                                            <div class="item">
-                                                <a href="#" title=""><img src="/img/slide-940x480-accessories-1.jpg" alt="" /></a>
+                                            <div class="item active">
+                                                <a href="#" title=""><img src="/img/slide-940x460-blank.gif" alt="" /></a>
                                                 <!--<div class="carousel-caption">
                                                     <div class="carousel-caption-inner">
                                                         <h3>Essential Accessories</h3>
                                                         <p>From<br><span class="huge-price">£39</span></p>
                                                         <p><a href="#" title="Browse Ties">Browse Accessories</a></p>
-                                                    </div>
-                                                </div>-->
-                                            </div>
-                                            <div class="active item">
-                                                <a href="#" title=""><img src="/img/slide-940x480-ties-1.jpg" alt="" /></a>
-                                                <!--<div class="carousel-caption">
-                                                    <div class="carousel-caption-inner">
-                                                        <h3>New Season 100% Pure Silk Ties</h3>
-                                                        <p>From<br><span class="huge-price">£65</span></p>
-                                                        <p><a href="#" title="Browse Ties">Browse Ties</a></p>
                                                     </div>
                                                 </div>-->
                                             </div>
@@ -40,6 +30,7 @@
                                     <div class="feature-text">
                                         <div class="feature-text-inner">
                                             <h4><a href="#" title="">Lorem Ipsum Dolor Sit Amet</a></h4>
+                                            <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
                                             <p><a href="#" title="Find out more">Find out more</a></p>
                                         </div>
                                     </div>
@@ -49,6 +40,7 @@
                                     <div class="feature-text">
                                         <div class="feature-text-inner">
                                             <h4><a href="#" title="">Lorem Ipsum Dolor Sit Amet</a></h4>
+                                            <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
                                             <p><a href="#" title="Find out more">Find out more</a></p>
                                         </div>
                                     </div>
@@ -58,6 +50,7 @@
                                     <div class="feature-text">
                                         <div class="feature-text-inner">
                                             <h4><a href="#" title="">Lorem Ipsum Dolor Sit Amet</a></h4>
+                                            <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
                                             <p><a href="#" title="Find out more">Find out more</a></p>
                                         </div>
                                     </div>

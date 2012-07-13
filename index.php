@@ -49,9 +49,11 @@
         <div class="page">
 			<?php include 'inc/header.php'; ?>
 			<?php include 'inc/main-home.php'; ?>
-			<?php include 'inc/footer.php'; ?>
+            <?php include 'inc/footer.php'; ?>
 		</div><!-- .page -->
     </div><!-- .wrapper -->
+    <!-- .footer-bottom is outside the main wrapper so it can be full width -->
+    <?php include 'inc/footer-bottom.php'; ?>
     
     <!-- Javascript
     ================================================== -->

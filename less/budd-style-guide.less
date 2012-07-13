@@ -21,6 +21,9 @@ header {
 		margin-bottom: @baseLineHeight * 2;
 		img {}
 	}
+	.page-header {
+		h1 { color: @black; }
+	}
 	.note {
 		position: absolute;
 		top: 0;
@@ -44,7 +47,7 @@ header {
 	right: auto !important;
 	bottom: auto !important;
 	left: auto !important;
-	border-bottom: 1px solid @buddGrey;
+	border-bottom: 1px solid @coolGray;
 	padding-bottom: @baseLineHeight / 2;
 }
 
@@ -65,6 +68,12 @@ section {
 	// Remove bottom margins from last children
 	& > :last-child {
 		margin-bottom: 0 !important;
+	}
+	.section-header {
+		h2 { color: @black; }
+	}
+	.section-subheader {
+		h3 { color: @black; }
 	}
 }
 
@@ -87,19 +96,22 @@ section {
 }
 
 .swatch-1 {
-	background-color: rgb(39, 40, 42);
+	background-color: @black;
 }
 .swatch-2 {
-	background-color: rgb(93, 94, 95);
+	background-color: @coolGrayDark;
 }
 .swatch-3 {
-	background-color: rgb(147, 147, 148);
+	background-color: @coolGray;
 }
 .swatch-4 {
-	background-color: rgb(201, 201, 202);
+	background-color: @coolGrayMid;
 }
 .swatch-5 {
-	background-color: rgb(128, 128, 132);
+	background-color: @coolGrayLight;
+}
+.swatch-6 {
+	background-color: @coolGrayLighter;
 }
 
 // Media queries

@@ -76,7 +76,7 @@ jQuery(document).ready(function($){
 			var top_spacing = 22;
 			var waypoint_offset = 22;
 			// Do stuff if browser width is < less than 768
-			if (browserwidth < 767) {
+			if (browserwidth < 768) {
 				nav_container.waypoint({
 					handler: function(event, direction) {
 						if (direction == 'down') {		
@@ -90,12 +90,8 @@ jQuery(document).ready(function($){
 						return -nav_container.outerHeight()-waypoint_offset;
 					}
 				});
-			// Do stuff if browser width is > greater than 768 but less than 977
-			} else if (browserwidth > 768 && browserwidth < 977) {
-				// Kill waypoints and remove inline styles!
-				nav_container.stop().waypoint('destroy').removeAttr('style');
-			// Do stuff if browser width is > greater than 978
-			} else if (browserwidth > 978) {
+			// Do stuff if browser width is > greater than 768
+			} else if (browserwidth > 768) {
 				// Kill waypoints and remove inline styles!
 				nav_container.stop().waypoint('destroy').removeAttr('style');
 			}

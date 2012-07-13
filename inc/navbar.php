@@ -16,7 +16,7 @@
                                         <a href="#" title="Nightwear" class="dropdown-toggle level-top"
                                 data-toggle="dropdown"><span>Nightwear</span></a>
                                         <ul class="level0 dropdown-menu">
-                                            <li class="level1 nav-2-1 first"><a href="#" title=""><span>Gowns</span></a></li>
+                                            <li class="level1 nav-2-1 first"><a href="#" title=""><span>Dressing Gowns</span></a></li>
                                             <li class="level1 nav-2-2"><a href="#" title=""><span>Pyjamas</span></a></li>
                                             <li class="level1 nav-2-3 last"><a href="#" title=""><span>Nightshirts</span></a></li>
                                         </ul>
@@ -33,25 +33,16 @@
                                             <li class="level1 nav-3-6"><a href="#" title=""><span>Gloves</span></a></li>
                                             <li class="level1 nav-3-7"><a href="#" title=""><span>Braces</span></a></li>
                                             <li class="level1 nav-3-8"><a href="#" title=""><span>Boxers</span></a></li>
-                                            <li class="level1 nav-3-9"><a href="#" title=""><span>Jewellery</span></a></li>
-                                            <li class="level1 nav-3-10 last"><a href="#" title=""><span>Umbrellas</span></a></li>
+                                            <li class="level1 nav-3-9"><a href="#" title=""><span>Cufflinks &amp; Studs</span></a></li>
                                         </ul>
                                     </li>
                                     <li class="level0 nav-4 level-top parent dropdown">
                                         <a href="#" title="Making a Shirt" class="level0 dropdown-toggle"
-                                data-toggle="dropdown"><span>Making a Shirt</span></a>
+                                data-toggle="dropdown"><span>Dress Guide</span></a>
                                         <ul class="dropdown-menu">
-                                            <li class="level1 nav-4-1 first"><a href="#" title=""><span>Bespoke Process</span></a></li>
-                                            <li class="level1 nav-4-2 parent">
-                                                <a href="#" title=""><span>Cloths</span></a>
-                                                <ul class="level1 nested-submenu">
-                                                    <li class="level2 nav-4-2-1 first"><a href="#" title=""><span>Budd Stripe</span></a></li>
-                                                    <li class="level2 nav-4-2-2 last"><a href="#" title=""><span>Cloth Selection</span></a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="level1 nav-4-3"><a href="#" title=""><span>Gallery</span></a></li>
-                                            <li class="level1 nav-4-4"><a href="#" title=""><span>Glossary</span></a></li>
-                                            <li class="level1 nav-4-5 last"><a href="#" title=""><span>Shirt Care</span></a></li>
+                                            <li class="level1 nav-4-1 first"><a href="#" title=""><span>White Tie</span></a></li>
+                                            <li class="level1 nav-4-2"><a href="#" title=""><span>Black Tie</span></a></li>
+                                            <li class="level1 nav-4-3 last"><a href="#" title=""><span>Morning Wear</span></a></li>
                                         </ul>
                                     </li>
                                 </ul><!-- .nav -->

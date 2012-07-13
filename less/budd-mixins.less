@@ -20,3 +20,33 @@
 	line-height: @line-height * 1px; // Pixel fallback
 	line-height: ~"@{rem}rem";
 }
+
+// ==========================================================================
+// Accessible hiding
+// ==========================================================================
+
+.accessible-hide {
+	// http://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
+	/*position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;*/
+	// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+	position: absolute !important;
+	height: 1px; width: 1px; 
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+// ==========================================================================
+// Cross browser inline-block: http://css-tricks.com/snippets/css/cross-browser-inline-block/
+// ==========================================================================
+
+.inline-block {
+	display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
+}

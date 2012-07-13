@@ -1,11 +1,25 @@
             <div class="header-container">
                 <a href="#footer-anchor" class="jump-to-search smooth-scroll visible-phone" title="Jump to search"><i class="icon-large icon-search"></i></a>
                 <div class="header">
-                    <h1 class="logo" id="logo">
-                        <a href="#" title="Budd Shirtmakers" class="logo">
-                            <img src="/img/logo-budd.png" alt="Budd Shirtmakers Logo" />
-                        </a>
-                    </h1>
+                    <div class="row">
+                        <div class="span4 vcard address hidden-phone">
+                            <div class="adr">
+                                <span class="street-address"><span class="smaller">3</span> Piccadilly Arcade</span> <br>
+                                <span class="locality">London</span> <span class="postal-code">SW<span class="smaller">1</span>Y <span class="smaller">6</span>NH</span>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <h1 class="logo" id="logo">
+                                <a href="#" title="Budd Shirtmakers" class="logo">
+                                    <img src="/img/logo-budd.png" alt="Budd Shirtmakers Logo" />
+                                </a>
+                            </h1>
+                        </div>
+                        <div class="span4 vcard telephone hidden-phone">
+                            Tel: <span class="tel"><span class="smaller">020 7493 0139</span></span><br>
+                            <a class="email org" href="mailto:hello@buddshirts.co.uk" title="Email Customer Services: hello@buddshirts.co.uk">hello@buddshirts.co.uk</a>
+                        </div>
+                    </div>
                     <div class="account-toolbar hidden-phone">
                         <div class="container">
                             <div class="row">
@@ -17,10 +31,13 @@
                                     </form><!-- .form-search -->
                                     <ul class="links link-list horizontal pull-right">
                                         <li class="first">
-                                            <a href="#" title="Contact Us">Contact Us</a>
+                                            <a href="#" title="Contact Us">Contact</a>
                                         </li>
                                         <li>
-                                            <a href="#" title="About Budd">About Budd</a>
+                                            <a href="#" title="About Budd">About</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Visits">Making A Shirt</a>
                                         </li>
                                         <li>
                                             <a href="#" title="Visits">Visits</a>

@@ -11,11 +11,11 @@
 // Budd greys
 // -------------------------
 
-@buddCoolGrey: #808084;
-@buddGrey: #27282a;
-@buddGreyMid: #5d5e5f;
-@buddGreyLight: #939394;
-@buddGreyLighter: #c9c9ca;
+@coolGrayDark: #616265; // Pantone Cool Grey 10
+@coolGray: #89898c; // Pantone Cool Grey 10 (75%)
+@coolGrayMid: #b0b0b2; // Pantone Cool Grey 10 (50%)
+@coolGrayLight: #d7d8d8; // Pantone Cool Grey 10 (25%)
+@coolGrayLighter: #efefef; // Pantone Cool Grey 10 (10%)
 
 
 // Grays
@@ -44,7 +44,7 @@
 // Scaffolding
 // -------------------------
 @bodyBackground:        @white;
-@textColor:             @buddGrey;
+@textColor:             @black;
 
 
 // Links
@@ -67,7 +67,7 @@
 
 @headingsFontFamily:    "Copperplate Light", serif;
 @headingsFontWeight:    normal;
-@headingsColor:         inherit; // empty to use BS default, @textColor
+@headingsColor:         @coolGrayDark;
 
 
 // Tables
@@ -80,8 +80,8 @@
 
 // Buttons
 // -------------------------
-@btnBackground:                     @buddGreyLighter;
-@btnBackgroundHighlight:            darken(@buddGreyLighter, 10%);
+@btnBackground:                     @coolGrayMid;
+@btnBackgroundHighlight:            darken(@coolGrayMid, 10%);
 @btnBorder:                         #ccc;
 
 @btnPrimaryBackground:              @linkColor;
@@ -113,10 +113,10 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            rgba(255,255,255,1);
-@dropdownBorder:                rgba(0,0,0,.2);
-@dropdownLinkColor:             @grayDark;
-@dropdownLinkColorHover:        @white;
+@dropdownBackground:            rgba(255,255,255,1.0);
+@dropdownBorder:                rgba(0,0,0,0);
+@dropdownLinkColor:             @black;
+@dropdownLinkColorHover:        lighten(@black, 50%);
 @dropdownLinkBackgroundHover:   @linkColor;
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
@@ -146,7 +146,7 @@
 
 // Input placeholder text color
 // -------------------------
-@placeholderText:         @grayLight;
+@placeholderText:         @coolGrayLight;
 
 
 // Hr border color
@@ -160,10 +160,10 @@
 @navbarBackground:                @white;
 @navbarBackgroundHighlight:       @white;
 
-@navbarText:                      @buddGrey;
-@navbarLinkColor:                 @buddGrey;
-@navbarLinkColorHover:            @buddGreyMid;
-@navbarLinkColorActive:           @buddGrey;
+@navbarText:                      @coolGray;
+@navbarLinkColor:                 @black;
+@navbarLinkColorHover:            lighten(@black, 30%);
+@navbarLinkColorActive:           @black;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      @white;
 

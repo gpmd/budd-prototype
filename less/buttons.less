@@ -18,7 +18,7 @@
 	font-size: @baseFontSize;
 	line-height: @baseLineHeight;
 	*line-height: 20px;
-	color: @buddGrey;
+	color: @black;
 	text-align: center;
 	text-shadow: 0 0 0 rgba(0,0,0,0);
 	text-decoration: none;
@@ -35,7 +35,7 @@
 
 // Hover state
 .btn:hover {
-	color: @buddGrey;
+	color: @white;
 	text-decoration: none;
 	background-color: @btnBackgroundHighlight;
 	.buttonBackground(@btnBackgroundHighlight, @btnBackgroundHighlight);
@@ -60,8 +60,9 @@
 // Disabled state
 .btn.disabled,
 .btn[disabled] {
+	color: @white;
 	cursor: default;
-	background-color: @buddGreyLighter;
+	background-color: @coolGrayLighter;
 	background-image: none;
 	.opacity(75);
 	.box-shadow(none);

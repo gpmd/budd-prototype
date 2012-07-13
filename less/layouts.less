@@ -5,10 +5,17 @@
 
 
 // ==========================================================================
-// Global block styles
+// Structural layout main block defaults
 // ==========================================================================
 
-// Header
+.header-container,
+.header {
+	position: relative;
+}
+
+
+// ==========================================================================
+// Global block styles
 // ==========================================================================
 
 // Main
@@ -16,19 +23,22 @@
 
 .main-container {
 	padding-top: @baseLineHeight;
-	border-top: 1px solid @buddGrey;
-	margin-top: @baseLineHeight;
+	border-top: 1px solid @coolGray;
+	margin-top: @baseLineHeight / 2;
 }
 
 
 // Footer
 // ==========================================================================
 
-.footer-container,
-.footer-bottom-inner {
+.footer-container {
 	padding-top: @baseLineHeight;
-	border-top: 1px solid @buddGrey;
-	margin-top: @baseLineHeight;
+	border-top: 1px solid @coolGray;
+	margin: @baseLineHeight * 2 0 @baseLineHeight;
+}
+
+.footer-bottom-inner {
+	padding: @baseLineHeight 0 @baseLineHeight * 3;
 }
 
 .footer-top {
@@ -40,14 +50,16 @@
 	}
 }
 
-// Landscape phone to small desktop & portrait tablet
+// Media queries
+
+// Up to small desktop & portrait tablet
 @media (max-width: 767px) {
 	.footer {
 		.quick-access {
 			// switch link list to horizontal
 			.link-list > .horizontal;
 			padding-bottom: @baseLineHeight;
-			border-bottom: 1px solid @buddGrey;
+			border-bottom: 1px solid @coolGray;
 			margin-bottom: @baseLineHeight;
 			text-align: center;
 		}
@@ -55,11 +67,25 @@
 		.span3 {
 			float: left;
 			display: block;
-			width: 50%;
+			width: 100%;
+			text-align: center;
+			.link-list {
+				li {
+					// Make the links inline
+					.inline-block;
+					margin-right: 6px;
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
 		}
 		// Add a bottom margin to the first two spans (not sure why (-n+3) is needed rather than (-n+2)?)
 		.span3:nth-child(-n+3) {
 			margin-bottom: @baseLineHeight;
 		}
+	}
+	.footer-bottom-inner {
+		padding: @baseLineHeight @baseLineHeight @baseLineHeight * 3;
 	}
 }
