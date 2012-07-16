@@ -2,7 +2,7 @@
                         <div class="navbar-inner">
                             <div class="container">
                                 <ul id="nav" class="nav">
-                                    <li class="level0 nav-1 first level-top parent dropdown">
+                                    <li class="level0 nav-1 first level-top parent dropdown hover-inactive">
                                         <a href="#" title="Shirts" class="dropdown-toggle level-top"
                                 data-toggle="dropdown"><span>Shirts</span></a>
                                         <ul class="level0 dropdown-menu">
@@ -12,7 +12,7 @@
                                             <li class="level1 nav-1-4 last"><a href="#" title=""><span>Dress Wear</span></a></li>
                                         </ul>
                                     </li>
-                                    <li class="level0 nav-2 level-top parent dropdown">
+                                    <li class="level0 nav-2 level-top parent dropdown hover-inactive">
                                         <a href="#" title="Nightwear" class="dropdown-toggle level-top"
                                 data-toggle="dropdown"><span>Nightwear</span></a>
                                         <ul class="level0 dropdown-menu">
@@ -21,7 +21,7 @@
                                             <li class="level1 nav-2-3 last"><a href="#" title=""><span>Nightshirts</span></a></li>
                                         </ul>
                                     </li>
-                                    <li class="level0 nav-3 level-top parent dropdown">
+                                    <li class="level0 nav-3 level-top parent dropdown hover-inactive">
                                         <a href="#" title="Accessories" class="dropdown-toggle level-top"
                                 data-toggle="dropdown"><span>Accessories</span></a>
                                         <ul class="level0 dropdown-menu">
@@ -36,8 +36,8 @@
                                             <li class="level1 nav-3-9"><a href="#" title=""><span>Cufflinks &amp; Studs</span></a></li>
                                         </ul>
                                     </li>
-                                    <li class="level0 nav-4 level-top parent dropdown">
-                                        <a href="#" title="Making a Shirt" class="level0 dropdown-toggle"
+                                    <li class="level0 nav-4 level-top parent dropdown hover-inactive">
+                                        <a href="#" title="Dress Guide" class="dropdown-toggle level-top"
                                 data-toggle="dropdown"><span>Dress Guide</span></a>
                                         <ul class="dropdown-menu">
                                             <li class="level1 nav-4-1 first"><a href="#" title=""><span>White Tie</span></a></li>

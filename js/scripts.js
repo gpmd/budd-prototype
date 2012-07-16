@@ -3,6 +3,21 @@ jQuery.noConflict();
 jQuery(document).ready(function($){
 
 
+	// Activate Hover Intent for main navigation
+	// ==========================================================================
+	var config = {    
+		over: hoverActive, // function = onMouseOver callback
+		timeout: 250, // number = milliseconds delay before onMouseOut
+		out: hoverInactive // function = onMouseOut callback
+	};
+	function hoverActive() {
+		$(this).removeClass("hover-inactive").addClass("hover-active");
+	}
+	function hoverInactive() {
+		$(this).removeClass("hover-active").addClass("hover-inactive");
+	}
+	$(".dropdown").hoverIntent(config);
+
 
 	// Function to detect when the window is resized
 	// ==========================================================================
@@ -24,6 +39,7 @@ jQuery(document).ready(function($){
 	}
 	detectResize();
 
+
 	// Account toolbar
 	// ==========================================================================
 
@@ -32,6 +48,7 @@ jQuery(document).ready(function($){
 		'top': '0'
 	}, 750, 'easeOutQuad');
 
+
 	// Carousel
 	// ==========================================================================
 
@@ -39,6 +56,7 @@ jQuery(document).ready(function($){
 		interval: 7500,
 		pause: "hover"
 	});
+
 
 	// Uniform
 	// ==========================================================================
